@@ -37,11 +37,11 @@ def validate_string(input_string):
 
 class TestStringValidation(unittest.TestCase):
     def test_valid_string(self):
-        valid_string = "Abcdefg1!"
+        valid_string = "Abcdefg123@"
         self.assertTrue(validate_string(valid_string))
 
     def test_short_string(self):
-        short_string = "abc123"
+        short_string = "Abc1@"
         self.assertFalse(validate_string(short_string))
 
     def test_whitespace_string(self):
@@ -49,19 +49,19 @@ class TestStringValidation(unittest.TestCase):
         self.assertFalse(validate_string(whitespace_string))
 
     def test_missing_lowercase(self):
-        missing_lowercase = "ABCDEFG1!"
+        missing_lowercase = "ABCDEFG123@"
         self.assertFalse(validate_string(missing_lowercase))
 
     def test_missing_uppercase(self):
-        missing_uppercase = "abcdefg1!"
+        missing_uppercase = "abcdefg123@"
         self.assertFalse(validate_string(missing_uppercase))
 
-    def test_missing_digit(self):
-        missing_digit = "Abcdefg!"
+    def test_missing_dig    it(self):
+        missing_digit = "Abcdefg@"
         self.assertFalse(validate_string(missing_digit))
 
     def test_missing_special(self):
-        missing_special = "Abcdefg1"
+        missing_special = "Abcdefg123"
         self.assertFalse(validate_string(missing_special))
 
 
